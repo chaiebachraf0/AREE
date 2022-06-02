@@ -1,0 +1,32 @@
+<!-- <div class="container-fluid" style="background-color: #174b8a;"> -->
+
+<div
+  class="container-fluid"
+  style="background-color: #eff3f8; margin-left: 5%;"
+>
+  <div class="container">
+    <!-- <div style="background-color: white;"> -->
+
+    <p-treeTable class="tab" [value]="files2">
+      <ng-template pTemplate="header" class="head">
+        <tr>
+          <th rowspan="1">Meters</th>
+        </tr>
+      </ng-template>
+      <ng-template
+        style="left: 38%;"
+        pTemplate="body"
+        let-rowNode
+        let-rowData="rowData"
+      >
+        <tr>
+          <td>
+            <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+            {{ rowData.Name }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-treeTable>
+  </div>
+</div>
+<!-- </div> -->
